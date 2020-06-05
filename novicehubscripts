@@ -1,6 +1,6 @@
 -- Gui to Lua
 -- Version: 3.1
-print(remote)
+
 -- Instances:
 
 local NoviceHubScripts = Instance.new("ScreenGui")
@@ -106,8 +106,8 @@ ExampleButton.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts
 	
-	function execute()
-		realremote:FireServer()
+	function execute(Source)
+		remote:FireServer(Source)
 	end
 	
 	function createButton(Source,txt)
