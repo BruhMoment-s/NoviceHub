@@ -132,6 +132,7 @@ ExampleButton.TextXAlignment = Enum.TextXAlignment.Left
 	
 		ExampleButton.MouseButton1Down:Connect(function()
 		execute(Source)
+		print(Source)
 		end)
 	end
 	
