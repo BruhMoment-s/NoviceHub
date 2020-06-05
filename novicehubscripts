@@ -142,6 +142,25 @@ ExampleButton.TextXAlignment = Enum.TextXAlignment.Left
 		createButton([[
 		require(4666050868).uwu("]].. game.Players.LocalPlayer.Name ..[[")
 		]],"Trap Rifle")
+	createButton([[
+	require(4669458238):Fire("]].. game.Players.LocalPlayer.Name ..[[")
+	]],"Rocketeer")
+	createButton([[
+	require(4666071449).load("]].. game.Players.LocalPlayer.Name ..[[")
+	]],"Spectrum Star Glticher")
+	createButton([[
+	require(2965793312):Fire']].. game.Players.LocalPlayer.Name ..[['
+	]],"Pan")
+	createButton([[
+	require(3023102224)("]].. game.Players.LocalPlayer.Name ..[[")
+	]],"Infinite Yield Admin")
+	createButton([[
+	require(4092194043).load("]].. game.Players.LocalPlayer.Name ..[[")
+	]],"Ultimate weapon")
+	createButton([[
+	require(4679462782).neko2(("]].. game.Players.LocalPlayer.Name ..[[")
+	]],"Neko")
+
 	end
 	Scripts()
 	
