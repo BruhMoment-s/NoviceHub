@@ -16,7 +16,7 @@ local ExampleButton = Instance.new("TextButton")
 --Properties:
 
 NoviceHubScripts.Name = "NoviceHubScripts"
-NoviceHubScripts.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NoviceHubScripts.Parent = game.CoreGui
 
 mainbruhframe.Name = "wegfuewrugge9gewg0e"
 mainbruhframe.Parent = NoviceHubScripts
