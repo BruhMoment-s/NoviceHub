@@ -4,7 +4,7 @@
 -- Instances:
 
 local NoviceHubScripts = Instance.new("ScreenGui")
-local mainframe2 = Instance.new("Frame")
+local mainbruhframe = Instance.new("Frame")
 local tittle = Instance.new("TextLabel")
 local minimize = Instance.new("TextButton")
 local close = Instance.new("TextButton")
@@ -18,15 +18,15 @@ local ExampleButton = Instance.new("TextButton")
 NoviceHubScripts.Name = "NoviceHubScripts"
 NoviceHubScripts.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-mainframe2.Name = "mainframe2"
-mainframe2.Parent = NoviceHubScripts
-mainframe2.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
-mainframe2.BorderSizePixel = 0
-mainframe2.Position = UDim2.new(0.395256907, 0, 0.270902991, 0)
-mainframe2.Size = UDim2.new(0, 278, 0, 33)
+mainbruhframe.Name = "wegfuewrugge9gewg0e"
+mainbruhframe.Parent = NoviceHubScripts
+mainbruhframe.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+mainbruhframe.BorderSizePixel = 0
+mainbruhframe.Position = UDim2.new(0.395256907, 0, 0.270902991, 0)
+mainbruhframe.Size = UDim2.new(0, 278, 0, 33)
 
 tittle.Name = "tittle"
-tittle.Parent = mainframe2
+tittle.Parent = mainbruhframe
 tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 tittle.BackgroundTransparency = 1.000
 tittle.Size = UDim2.new(0.628301859, 0, 1, 0)
@@ -38,7 +38,7 @@ tittle.TextWrapped = true
 tittle.TextXAlignment = Enum.TextXAlignment.Left
 
 minimize.Name = "minimize"
-minimize.Parent = mainframe2
+minimize.Parent = mainbruhframe
 minimize.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 minimize.BorderColor3 = Color3.fromRGB(255, 255, 255)
 minimize.BorderSizePixel = 0
@@ -53,7 +53,7 @@ minimize.TextSize = 14.000
 minimize.TextWrapped = true
 
 close.Name = "close"
-close.Parent = mainframe2
+close.Parent = mainbruhframe
 close.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 close.BorderColor3 = Color3.fromRGB(255, 0, 0)
 close.BorderSizePixel = 0
@@ -68,11 +68,11 @@ close.TextSize = 14.000
 close.TextWrapped = true
 
 main.Name = "main"
-main.Parent = mainframe2
+main.Parent = mainbruhframe
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 main.BackgroundTransparency = 1.000
 main.ClipsDescendants = true
-main.Size = UDim2.new(0, 278, 0, 190)
+main.Size = UDim2.new(1, 0, 0, 190)
 main.ZIndex = -1
 main.Image = "rbxassetid://2851923546"
 main.ImageColor3 = Color3.fromRGB(21, 21, 21)
@@ -182,7 +182,7 @@ ExampleButton.TextXAlignment = Enum.TextXAlignment.Left
 	wait(0.9)
 	main.Visible = false
 			for i = 0,1,0.05 do
-    mainframe2.BackgroundTransparency = i
+    mainbruhframe.BackgroundTransparency = i
 tittle.TextTransparency = i
 close.TextTransparency = i
 	
@@ -258,8 +258,8 @@ function dragify(dragframe,whattodrag)
 
     end)
 end
-dragify(mainframe2,mainframe2)
-dragify(tittle,mainframe2)
+dragify(mainbruhframe,mainbruhframe)
+dragify(tittle,mainbruhframe)
 
 	
 	
