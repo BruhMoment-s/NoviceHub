@@ -5,7 +5,7 @@
 
 local NoviceHubScripts = Instance.new("ScreenGui")
 local mainbruhframe = Instance.new("Frame")
-local tittle = Instance.new("TextLabel")
+local testtittle = Instance.new("TextLabel")
 local minimize = Instance.new("TextButton")
 local close = Instance.new("TextButton")
 local main = Instance.new("ImageLabel")
@@ -25,17 +25,17 @@ mainbruhframe.BorderSizePixel = 0
 mainbruhframe.Position = UDim2.new(0.395256907, 0, 0.270902991, 0)
 mainbruhframe.Size = UDim2.new(0, 278, 0, 33)
 
-tittle.Name = "tittle"
-tittle.Parent = mainbruhframe
-tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-tittle.BackgroundTransparency = 1.000
-tittle.Size = UDim2.new(0.628301859, 0, 1, 0)
-tittle.Font = Enum.Font.SourceSans
-tittle.Text = "NoviceHub Scripts"
-tittle.TextColor3 = Color3.fromRGB(255, 255, 255)
-tittle.TextSize = 25.000
-tittle.TextWrapped = true
-tittle.TextXAlignment = Enum.TextXAlignment.Left
+testtittle.Name = "testtittleaaaaa"
+testtittle.Parent = mainbruhframe
+testtittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+testtittle.BackgroundTransparency = 1.000
+testtittle.Size = UDim2.new(0.628301859, 0, 1, 0)
+testtittle.Font = Enum.Font.SourceSans
+testtittle.Text = "NoviceHub Scripts"
+testtittle.TextColor3 = Color3.fromRGB(255, 255, 255)
+testtittle.TextSize = 25.000
+testtittle.TextWrapped = true
+testtittle.TextXAlignment = Enum.TextXAlignment.Left
 
 minimize.Name = "minimize"
 minimize.Parent = mainbruhframe
@@ -183,7 +183,7 @@ ExampleButton.TextXAlignment = Enum.TextXAlignment.Left
 	main.Visible = false
 			for i = 0,1,0.05 do
     mainbruhframe.BackgroundTransparency = i
-tittle.TextTransparency = i
+testtittle.TextTransparency = i
 close.TextTransparency = i
 	
 		minimize.TextTransparency = i
@@ -207,7 +207,7 @@ minimize.MouseButton1Down:Connect(function()
 		main:TweenSizeAndPosition(UDim2.new(1,0,0,0),UDim2.new(0,0,1,0),"Out","Quad",0.5)
 	wait(0.4)
 	else
-			main:TweenSizeAndPosition(UDim2.new(1,0,0,262),UDim2.new(0,0,0,0),"Out","Quad",0.5)
+			main:TweenSizeAndPosition(UDim2.new(1,0,0,190),UDim2.new(0,0,0,0),"Out","Quad",0.5)
 	wait(0.4)
 		wait() 
 			scripts.BackgroundTransparency = 1
@@ -259,7 +259,7 @@ function dragify(dragframe,whattodrag)
     end)
 end
 dragify(mainbruhframe,mainbruhframe)
-dragify(tittle,mainbruhframe)
+dragify(testtittle,mainbruhframe)
 
 	
 	
