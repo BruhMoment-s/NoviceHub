@@ -1,0 +1,246 @@
+-- Gui to Lua
+-- Version: 3.1
+
+-- Instances:
+
+local NoviceHubScripts = Instance.new("ScreenGui")
+local mainframe2 = Instance.new("Frame")
+local tittle = Instance.new("TextLabel")
+local minimize = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local main = Instance.new("ImageLabel")
+local scripts = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local ExampleButton = Instance.new("TextButton")
+
+--Properties:
+
+NoviceHubScripts.Name = "NoviceHubScripts"
+NoviceHubScripts.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+mainframe2.Name = "mainframe2"
+mainframe2.Parent = NoviceHubScripts
+mainframe2.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+mainframe2.BorderSizePixel = 0
+mainframe2.Position = UDim2.new(0.395256907, 0, 0.270902991, 0)
+mainframe2.Size = UDim2.new(0, 278, 0, 33)
+
+tittle.Name = "tittle"
+tittle.Parent = mainframe2
+tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tittle.BackgroundTransparency = 1.000
+tittle.Size = UDim2.new(0.628301859, 0, 1, 0)
+tittle.Font = Enum.Font.SourceSans
+tittle.Text = "NoviceHub Scripts"
+tittle.TextColor3 = Color3.fromRGB(255, 255, 255)
+tittle.TextSize = 25.000
+tittle.TextWrapped = true
+tittle.TextXAlignment = Enum.TextXAlignment.Left
+
+minimize.Name = "minimize"
+minimize.Parent = mainframe2
+minimize.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+minimize.BorderColor3 = Color3.fromRGB(255, 255, 255)
+minimize.BorderSizePixel = 0
+minimize.Position = UDim2.new(0.851672351, 0, 0, 0)
+minimize.Size = UDim2.new(0, 20, 0, 20)
+minimize.ZIndex = 11
+minimize.Font = Enum.Font.SourceSans
+minimize.Text = "_"
+minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+minimize.TextScaled = true
+minimize.TextSize = 14.000
+minimize.TextWrapped = true
+
+close.Name = "close"
+close.Parent = mainframe2
+close.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+close.BorderColor3 = Color3.fromRGB(255, 0, 0)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.926757574, 0, 0, 0)
+close.Size = UDim2.new(0, 20, 0, 20)
+close.ZIndex = 11
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+
+main.Name = "main"
+main.Parent = mainframe2
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.BackgroundTransparency = 1.000
+main.ClipsDescendants = true
+main.Size = UDim2.new(0, 278, 0, 190)
+main.ZIndex = -1
+main.Image = "rbxassetid://2851923546"
+main.ImageColor3 = Color3.fromRGB(21, 21, 21)
+main.ScaleType = Enum.ScaleType.Slice
+main.SliceCenter = Rect.new(20, 20, 20, 20)
+
+scripts.Name = "scripts"
+scripts.Parent = main
+scripts.Active = true
+scripts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scripts.BackgroundTransparency = 1.000
+scripts.BorderSizePixel = 0
+scripts.Position = UDim2.new(0, 0, 0.17368421, 0)
+scripts.Size = UDim2.new(0, 278, 0.850000024, 0)
+
+UIListLayout.Parent = scripts
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+ExampleButton.Name = "ExampleButton"
+ExampleButton.Parent = scripts
+ExampleButton.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+ExampleButton.BorderColor3 = Color3.fromRGB(115, 115, 115)
+ExampleButton.Size = UDim2.new(1, 0, 0, 40)
+ExampleButton.Visible = false
+ExampleButton.Font = Enum.Font.SourceSansSemibold
+ExampleButton.Text = "InsertScript"
+ExampleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExampleButton.TextSize = 25.000
+ExampleButton.TextWrapped = true
+ExampleButton.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Scripts
+	
+	function execute()
+		realremote:FireServer()
+	end
+	
+	function createButton(Source,txt)
+	
+	local UIListLayout = Instance.new("UIListLayout")
+	local ExampleButton = Instance.new("TextButton")
+	
+	--Properties:
+	
+	
+	ExampleButton.Name = "ExampleButton"
+	ExampleButton.Parent = scripts
+	ExampleButton.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+	ExampleButton.BorderColor3 = Color3.fromRGB(115, 115, 115)
+	ExampleButton.Size = UDim2.new(1, 0, 0, 40)
+	ExampleButton.Font = Enum.Font.SourceSansSemibold
+	ExampleButton.Text = txt
+	ExampleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	ExampleButton.TextSize = 25.000
+	ExampleButton.TextWrapped = true
+	ExampleButton.TextXAlignment = Enum.TextXAlignment.Left
+	
+		ExampleButton.MouseButton1Down:Connect(function()
+		execute(Source)
+		end)
+	end
+	
+	
+	
+	
+	function Scripts()
+		createButton([[
+		require(4666050868).uwu("]].. game.Players.LocalPlayer.Name ..[[")
+		]],"Trap Rifle")
+	end
+	Scripts()
+	
+	
+	scripts.BackgroundColor3 = Color3.fromRGB(21,21,21)
+	close.BackgroundTransparency = 1
+	minimize.BackgroundTransparency = 1
+	close.MouseButton1Down:Connect(function()
+		for i = 1,0,-0.05 do
+			scripts.BackgroundTransparency = i
+		
+		wait()
+	end
+			scripts.BackgroundTransparency = 0
+	wait(0.1)
+	
+	    main:TweenSizeAndPosition(UDim2.new(0,0,0,0),UDim2.new(0,0,1,0),"Out","Quad")
+	wait(0.9)
+	main.Visible = false
+			for i = 0,1,0.05 do
+    mainframe2.BackgroundTransparency = i
+tittle.TextTransparency = i
+close.TextTransparency = i
+	
+		minimize.TextTransparency = i
+	
+		wait()
+	end
+	wait(0.1)
+	NoviceHubScripts:Destroy()
+end)
+toggled = false
+minimize.MouseButton1Down:Connect(function()
+	if toggled == false then
+	
+						for i = 1,0,-0.05 do
+						scripts.BackgroundTransparency = i
+				wait()
+			end
+	
+		wait() 
+	scripts.BackgroundTransparency = 0
+		main:TweenSizeAndPosition(UDim2.new(1,0,0,0),UDim2.new(0,0,1,0),"Out","Quad",0.5)
+	wait(0.4)
+	else
+			main:TweenSizeAndPosition(UDim2.new(1,0,0,262),UDim2.new(0,0,0,0),"Out","Quad",0.5)
+	wait(0.4)
+		wait() 
+			scripts.BackgroundTransparency = 1
+	end
+	
+		toggled = not toggled
+end)
+
+	
+	
+	
+	
+	local UIS = game:GetService("UserInputService")
+function dragify(dragframe,whattodrag)
+    dragToggle = nil
+    dragSpeed = 1
+    dragInput = nil
+    dragStart = nil
+    dragPos = nil
+    function updateInput(input)
+        Delta = input.Position - dragStart
+        Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+        game:GetService("TweenService"):Create(whattodrag, TweenInfo.new(0.25), {Position = Position}):Play()
+    end
+    whattodrag.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        if UIS:GetFocusedTextBox() == nil then
+            dragToggle = true
+            dragStart = input.Position
+            startPos = dragframe.Position
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragToggle = false
+                end
+            end)
+                end
+        end
+    end)
+    whattodrag.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+    game:GetService("UserInputService").InputChanged:Connect(function(input)
+        if input == dragInput and dragToggle then
+            updateInput(input)
+        end
+
+    end)
+end
+dragify(mainframe2,mainframe2)
+dragify(tittle,mainframe2)
+
+	
+	
+	
