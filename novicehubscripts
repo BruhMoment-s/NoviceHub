@@ -12,7 +12,7 @@ local main = Instance.new("ImageLabel")
 local scripts = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
 local ExampleButton = Instance.new("TextButton")
-
+local designfrmae = Instance.new("Frame")
 --Properties:
 
 NoviceHubScripts.Name = "NoviceHubScripts"
@@ -105,6 +105,16 @@ ExampleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 ExampleButton.TextSize = 25.000
 ExampleButton.TextWrapped = true
 ExampleButton.TextXAlignment = Enum.TextXAlignment.Left
+
+designfrmae.Name = "designfrmae"
+designfrmae.Parent = mainbruhframe
+designfrmae.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+designfrmae.BorderSizePixel = 0
+designfrmae.Position = UDim2.new(0, 0, 1, 0)
+designfrmae.Size = UDim2.new(1, 0, 0, 5)
+designfrmae.ZIndex = 10
+
+
 
 -- Scripts
 	
@@ -226,7 +236,18 @@ minimize.MouseButton1Down:Connect(function()
 		toggled = not toggled
 end)
 
-	
+	local function BEVHC_fake_script() -- designfrmae.LocalScript 
+	local script = Instance.new('LocalScript', designfrmae)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	counter = 0
+	while wait(0.1) and wait() do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(BEVHC_fake_script)()
+
 	
 	mainbruhframe.Active = true
 mainbruhframe.Draggable = true
