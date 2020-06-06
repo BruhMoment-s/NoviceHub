@@ -183,7 +183,7 @@ ExampleButton.TextXAlignment = Enum.TextXAlignment.Left
 	    main:TweenSizeAndPosition(UDim2.new(0,0,0,0),UDim2.new(0,0,1,0),"Out","Quad")
 	wait(0.9)
 	main.Visible = false
-			for i = 0,1,0.05 do
+			for i = 0,1,0.1 do
     mainbruhframe.BackgroundTransparency = i
 testtittle.TextTransparency = i
 close.TextTransparency = i
@@ -212,9 +212,9 @@ minimize.MouseButton1Down:Connect(function()
 		scripts.BackgroundTransparency = 0
 			main:TweenSizeAndPosition(UDim2.new(1,0,0,190),UDim2.new(0,0,0,0),"Out","Quad",0.5)
 	wait(0.4)
-				for i = 0,1,0.05 do
+				for i = 0,1,0.1 do
 						scripts.BackgroundTransparency = i
-						print(scripts.BackgroundTransparency)
+			
 				wait()
 			end
 	
