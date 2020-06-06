@@ -82,11 +82,13 @@ main.SliceCenter = Rect.new(20, 20, 20, 20)
 scripts.Name = "scripts"
 scripts.Parent = main
 scripts.Active = true
-scripts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scripts.BackgroundColor3 = Color3.fromRGB(21,21,21)
 scripts.BackgroundTransparency = 1.000
 scripts.BorderSizePixel = 0
 scripts.Position = UDim2.new(0, 0, 0.17368421, 0)
 scripts.Size = UDim2.new(0, 278, 0.850000024, 0)
+scripts.ZIndex = 11
+scripts.ClipsDescendants = true
 
 UIListLayout.Parent = scripts
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
