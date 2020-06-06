@@ -209,9 +209,16 @@ minimize.MouseButton1Down:Connect(function()
 		main:TweenSizeAndPosition(UDim2.new(1,0,0,0),UDim2.new(0,0,1,0),"Out","Quad",0.5)
 	wait(0.4)
 	else
+		
 			main:TweenSizeAndPosition(UDim2.new(1,0,0,190),UDim2.new(0,0,0,0),"Out","Quad",0.5)
 	wait(0.4)
+					for i = 0,1,0.05 do
+						scripts.BackgroundTransparency = i
+				wait()
+			end
+	
 		wait() 
+		
 			scripts.BackgroundTransparency = 1
 	end
 	
